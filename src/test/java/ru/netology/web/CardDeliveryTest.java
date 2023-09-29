@@ -3,6 +3,7 @@ package ru.netology.web;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -21,6 +22,7 @@ public class CardDeliveryTest {
     @Test
     void cardDelivery() {
         open("http://localhost:9999");
+        String date = generateDate(3, "dd.MM.yyyy");
         $("[data-test-id='city'] input").setValue("Москва");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT,Keys.HOME),Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue("10.10.2023");

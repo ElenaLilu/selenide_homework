@@ -6,7 +6,7 @@ branches:
   only:
     - master  # ветка git
 
-build: off  # будем использовать свой скрипт сборки
+build: off
 
 install:
   - java -jar ./artifacts/app-card-delivery.jar &
